@@ -1,0 +1,19 @@
+=== df_fact (data.csv) ===
+shape: (9, 7)
+columns: ['contractor', 'contract_num', 'date', 'object', 'expenses', 'revenue', 'profit']
+
+=== df_plan (тест_бюджет.csv) ===
+shape: (31, 4)
+columns: ['object', 'object_type', 'planned_expense', 'planned_revenue']
+
+=== общие / уникальные колонки ===
+общие: {'object'}
+только в fact: {'revenue', 'date', 'contract_num', 'expenses', 'contractor', 'profit'}
+только в plan: {'planned_revenue', 'planned_expense', 'object_type'}
+
+=== ключ object: совпадают ли значения? ===
+object в fact: 9 уник.
+object в plan: 13 уник.
+совпадают (есть в обоих): 9
+только в fact: 0
+только в plan: 4

@@ -16,7 +16,7 @@ result = []
 f = open("problem.txt", encoding="utf-8")
 for index, line in enumerate(f):
     line = re.sub('контрагент', 'contractor', line ,flags=re.IGNORECASE); line = re.sub('договор', 'contract_num', line ,flags=re.IGNORECASE)
-    line = re.sub('объект', 'object_name', line ,flags=re.IGNORECASE); line = re.sub('расходы', 'expenses', line ,flags=re.IGNORECASE)
+    line = re.sub('объект', 'object', line ,flags=re.IGNORECASE); line = re.sub('расходы', 'expenses', line ,flags=re.IGNORECASE)
     line = re.sub('выручка', 'revenue', line ,flags=re.IGNORECASE); line = re.sub(' от ', '; date: ', line ,flags=re.IGNORECASE)
     line = line.replace('|', ' ; ').replace(':', ' ')
     line = line.split(';')
